@@ -1,6 +1,6 @@
 ---
 title: "Weight of Fish"
-author: "Your Name"
+author: "Chris Gonzalez"
 date: "`r Sys.Date()`"  
 output: 
   html_document:
@@ -60,10 +60,18 @@ Whitefish <- select(Whitefish, -Species)
 
 ### Best Two regressor model
 
+
 ## Roach
 
 ### Best Models
 
 ### Best Two regressor model
 
+
+
 ## Final Summary Statements
+
+
+
+
+
