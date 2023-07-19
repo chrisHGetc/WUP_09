@@ -82,17 +82,17 @@ The optimal approach for determining the weight of a perch fish involves employi
 
 ### Best Models
 ```{r}
-regsubsets.out <-
+regsubsets.outpike <-
     regsubsets(Weight ~ .,
                data = Pike,
                nbest = 1,       # 1 best model for each number of predictors
                nvmax = NULL,    # NULL for no limit on number of variables
                force.in = NULL, force.out = NULL,
                method = "exhaustive")
-summary.out <- summary(regsubsets.out)
-as.data.frame(summary.out$outmat)
+summary.outpike <- summary(regsubsets.outpike)
+as.data.frame(summary.outpike$outmat)
 #library(car)
-subsets(regsubsets.out,statistic="adjr2",legend="bottomright",main="Adjusted R^2")
+subsets(regsubsets.outpike,statistic="adjr2",legend="bottomright",main="Adjusted R^2")
 ```
 
 By leveraging the graphical representation of the regression model, the analysis highlights the optimal combination of variables to employ. In this specific scenario, the visual depiction indicates that the most effective model encompasses the variables length 1, length 2, length 3, height, and width. The graph assists in visually identifying these variables as the key factors for accurate predictions and reliable outcomes within the regression analysis.
@@ -100,31 +100,36 @@ By leveraging the graphical representation of the regression model, the analysis
 
 ### Best Two regressor model
 ```{r}
-best.model <- lm(Weight~Length1+Length3,data=Pike)
-summary(best.model)
+pikebesttwo <- lm(Weight~Length1+Length3,data=Pike)
+summary(pikebesttwo)
 ```
-Through careful analysis of the graph, it has been determined that the best 2 regression model consists of length 1 and length 3 as its two key variables. This conclusion is supported by an impressive adjusted R-squared value of 0.9649, indicating a high level of goodness-of-fit and predictive accuracy. By focusing on these specific variables, the regression model yields substantial explanatory power and enhances the precision of weight estimation for the perch fish.
+Through careful analysis of the graph, it has been determined that the best 2 regression model consists of length 1 and length 3 as its two key variables. This conclusion is supported by an impressive adjusted R-squared value of 0.9649, indicating a high level of goodness-of-fit and predictive accuracy. By focusing on these specific variables, the regression model yields substantial explanatory power and enhances the precision of weight estimation for the pike fish.
 
 ## Roach
 
 ### Best Models
 ```{r}
-regsubsets.out <-
+regsubsets.outroach <-
     regsubsets(Weight ~ .,
                data = Roach,
                nbest = 1,       # 1 best model for each number of predictors
                nvmax = NULL,    # NULL for no limit on number of variables
                force.in = NULL, force.out = NULL,
                method = "exhaustive")
-summary.out <- summary(regsubsets.out)
+summary.out <- summary(regsubsets.outroach)
 as.data.frame(summary.out$outmat)
 #library(car)
-subsets(regsubsets.out,statistic="adjr2",legend="topright",main="Adjusted R^2")
+subsets(regsubsets.outroach,statistic="adjr2",legend="topright",main="Adjusted R^2")
 ```
-
+Based on the analysis conducted using the leaps shortcut code, it has been determined that the most optimal regression model comprises the variables Length 3 and Width. This conclusion is derived from the graphical representation provided by the code, which indicates that these two variables yield the best results in terms of model performance. By focusing on Length 3 and Width as key predictors, the regression model exhibits a higher degree of accuracy and provides valuable insights for estimating the weight of the roach fish.
 
 
 ### Best Two regressor model
+
+```{r}
+best.modelroach <- lm(Weight~Length3+Width,data=Roach)
+summary(best.modelroach)
+```
 
 
 
