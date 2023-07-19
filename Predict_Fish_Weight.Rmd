@@ -95,7 +95,7 @@ as.data.frame(summary.out$outmat)
 subsets(regsubsets.out,statistic="adjr2",legend="bottomright",main="Adjusted R^2")
 ```
 
-
+By leveraging the graphical representation of the regression model, the analysis highlights the optimal combination of variables to employ. In this specific scenario, the visual depiction indicates that the most effective model encompasses the variables length 1, length 2, length 3, height, and width. The graph assists in visually identifying these variables as the key factors for accurate predictions and reliable outcomes within the regression analysis.
 
 
 ### Best Two regressor model
