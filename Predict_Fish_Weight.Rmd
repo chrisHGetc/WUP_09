@@ -108,6 +108,21 @@ Through careful analysis of the graph, it has been determined that the best 2 re
 ## Roach
 
 ### Best Models
+```{r}
+regsubsets.out <-
+    regsubsets(Weight ~ .,
+               data = Roach,
+               nbest = 1,       # 1 best model for each number of predictors
+               nvmax = NULL,    # NULL for no limit on number of variables
+               force.in = NULL, force.out = NULL,
+               method = "exhaustive")
+summary.out <- summary(regsubsets.out)
+as.data.frame(summary.out$outmat)
+#library(car)
+subsets(regsubsets.out,statistic="adjr2",legend="topright",main="Adjusted R^2")
+```
+
+
 
 ### Best Two regressor model
 
