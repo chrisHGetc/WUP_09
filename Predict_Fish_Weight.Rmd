@@ -103,7 +103,7 @@ By leveraging the graphical representation of the regression model, the analysis
 best.model <- lm(Weight~Length1+Length3,data=Pike)
 summary(best.model)
 ```
-
+Through careful analysis of the graph, it has been determined that the best 2 regression model consists of length 1 and length 3 as its two key variables. This conclusion is supported by an impressive adjusted R-squared value of 0.9649, indicating a high level of goodness-of-fit and predictive accuracy. By focusing on these specific variables, the regression model yields substantial explanatory power and enhances the precision of weight estimation for the perch fish.
 
 ## Roach
 
