@@ -130,6 +130,7 @@ Based on the analysis conducted using the leaps shortcut code, it has been deter
 best.modelroach <- lm(Weight~Length3+Width,data=Roach)
 summary(best.modelroach)
 ```
+The analysis supports the notion that the best two-variable regression model coincides with the overall best regression model, both featuring Length 3 and Width as the chosen variables. This alignment is further validated by an adjusted R-squared value of 0.8482, which signifies a strong degree of explanatory power and predictive capability for the model. The utilization of Length 3 and Width as key predictors enhances the accuracy and reliability of weight estimation for the roach fish.
 
 
 
