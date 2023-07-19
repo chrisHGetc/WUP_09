@@ -99,6 +99,10 @@ By leveraging the graphical representation of the regression model, the analysis
 
 
 ### Best Two regressor model
+```{r}
+best.model <- lm(Weight~Length1+Length3,data=Pike)
+summary(best.model)
+```
 
 
 ## Roach
