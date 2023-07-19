@@ -66,6 +66,8 @@ as.data.frame(summary.out$outmat)
 subsets(regsubsets.out,statistic="adjr2",legend="topright",main="Adjusted R^2")
 ```
 
+Based on the analysis performed using the leaps code, a graphical representation provided valuable insights leading to the determination that the height and width dimensions constitute the most effective combination within the regression model. This conclusion was derived from visual observations and data interpretation facilitated by the graph generated through the analysis.
+
 
 ### Best Two regressor model
 
